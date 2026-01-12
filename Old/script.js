@@ -124,31 +124,7 @@ inquiryButtons.forEach(button => {
     button.addEventListener('click', function() {
         const card = this.closest('.pricing-card');
         const packageName = card.querySelector('h3').textContent;
-        
-        // Check if this is "Pisemna" tariff
-        const isPisemna = packageName.includes('Pisemna');
-        const versionSelectGroup = document.getElementById('versionSelectGroup');
-        const versionSelect = document.getElementById('versionSelect');
-        
-        let packagePrice;
-        
-        if (isPisemna) {
-            // Show version selector for Pisemna
-            versionSelectGroup.style.display = 'block';
-            packagePrice = '1 000 PLN';
-            
-            // Update price when version changes
-            versionSelect.onchange = function() {
-                const selectedPrice = this.value.includes('1000') ? '1 000 PLN' : '1 500 PLN';
-                document.querySelector('.package-price').textContent = selectedPrice;
-                selectedPackage.price = selectedPrice;
-            };
-        } else {
-            // Hide version selector for other tariffs
-            versionSelectGroup.style.display = 'none';
-            const priceElement = card.querySelector('.price');
-            packagePrice = priceElement ? priceElement.textContent : 'Na zapytanie';
-        }
+        const packagePrice = card.querySelector('.price').textContent;
 
         selectedPackage = {
             name: packageName,
@@ -158,6 +134,8 @@ inquiryButtons.forEach(button => {
         // Update modal content
         document.querySelector('.package-name').textContent = packageName;
         document.querySelector('.package-price').textContent = packagePrice;
+        // document.getElementById('modalTotalPrice').textContent = packagePrice;
+        // document.getElementById('modalTotalPriceBottom').textContent = packagePrice;
 
         // Show modal
         modal.classList.add('active');

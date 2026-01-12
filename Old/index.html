@@ -137,27 +137,17 @@
             <h2 class="section-title">Wybierz swój pakiet</h2>
 
             <div class="pricing-grid">
-                <div class="pricing-card pricing-slide-in" data-package="Pisemna">
+                <div class="pricing-card pricing-slide-in" data-package="Pisemna" data-price="1000">
                     <div class="pricing-badge">Basic</div>
                     <h3>Taryfa "Pisemna"</h3>
                     <p class="pricing-desc">Przejdziesz wywiad pisemnie odpowiadając na pytania</p>
-
-                    <div style="display: flex; gap: 0; margin: 1.5rem 0;">
-                        <div style="flex: 1; padding: 1rem; text-align: center;">
-                            <div style="font-size: 1.1rem; font-weight: 600; color: var(--dark-color); margin-bottom: 0.5rem;">Ebook</div>
-                            <div style="font-size: 2rem; font-weight: bold; color: var(--primary-color);">1 000 PLN</div>
-                        </div>
-                        <div style="width: 2px; background: #e2e8f0; margin: 0 0.5rem;"></div>
-                        <div style="flex: 1; padding: 1rem; text-align: center;">
-                            <div style="font-size: 1.1rem; font-weight: 600; color: var(--dark-color); margin-bottom: 0.5rem;">Papierowa</div>
-                            <div style="font-size: 2rem; font-weight: bold; color: var(--primary-color);">1 500 PLN</div>
-                        </div>
+                    <div class="price-container">
+                        <div class="price">1 000 PLN</div>
                     </div>
-
                     <ul class="features-list">
                         <li>Ukończysz książkę, odpowiadając na indywidualnie przygotowane dla Ciebie pytania na naszej platformie.</li>
                         <li>Redaktorzy sprawdzą Twoje historie pod kątem gramatyki, interpunkcji i pisowni.</li>
-                        <li>Wersja elektroniczna lub papierowa (elektroniczna + drukowana).</li>
+                        <li>Otrzymasz książkę wspomnień w formacie elektronicznym lub papierowym.</li>
                     </ul>
                     <button class="btn btn--primary btn--full-width btn-inquiry">Zapytaj</button>
                 </div>
@@ -226,24 +216,20 @@
             </div>
 
             <form id="inquiryForm" class="inquiry-form">
-                    <div class="form-group" id="versionSelectGroup" style="display: none;">
-                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--dark-color);">Wybierz wersję:</label>
-                        <select name="version" id="versionSelect" style="width: 100%; padding: 1.2rem 1.5rem; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 1rem; font-family: inherit; background: white;">
-                            <option value="Elektroniczna - 1000 PLN">Elektroniczna - 1 000 PLN</option>
-                            <option value="Papierowa - 1500 PLN">Papierowa - 1 500 PLN</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Wpisz imię i nazwisko" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Twój Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" name="phone" placeholder="+48 123 456 789" required>
-                    </div>
-                    <button type="submit" class="btn btn--primary btn--full-width btn-proceed">Wyślij zapytanie</button>
-                </form>
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Wpisz imię i nazwisko" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Twój Email" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder="+48 123 456 789" required>
+                </div>
+
+                <button type="submit" class="btn btn--primary btn--full-width btn-proceed">Wyślij zapytanie</button>
+            </form>
         </div>
     </div>
 
